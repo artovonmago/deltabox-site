@@ -1,0 +1,15 @@
+name: pages
+on: { workflow_dispatch: { inputs: { tag: { required: true } } } }
+permissions: { contents: read, pages: write, id-token: write }
+concurrency: { group: pages, cancel-in-progress: true }
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: { name: github-pages, url: "${{ steps.d.outputs.page_url }}" }
+    steps:
+      - run: gh release download "${{ inputs.tag }}" -R "${{ github.repository }}" -p site.tgz && mkdir site && tar -C site -xzf site.tgz
+        env: { GH_TOKEN: "${{ github.token }}" }
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: site }
+      - id: d
+        uses: actions/deploy-pages@v4

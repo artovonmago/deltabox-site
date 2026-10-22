@@ -1,1 +1,3 @@
 deltabox, artovons cool deltarune sandbox thingy, it has a very simple but flexible battle editor, overworld editor, and also just battle simulator for all of the battles in deltarune (still being worked on) ill be honest claude code did most of work, so it's sure to have bugs.
+
+check it out! https://github.com/artovonmago/deltabox-site

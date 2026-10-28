@@ -2,6 +2,7 @@ deltabox, artovons cool deltarune sandbox thingy, it has a very simple but flexi
 
 check it out! https://artovonmago.github.io/deltabox-site/
 im open for feedback!
+
 also an animation made with deltabox:
 
 ![no context animation made with deltabox](demo.gif)
